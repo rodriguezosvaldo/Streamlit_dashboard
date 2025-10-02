@@ -59,14 +59,14 @@ if not filtered_data.empty:
 
     # --- Bar Chart ---
     bar_chart_fig = helper.create_bar_chart(filtered_data)
-    st.plotly_chart(bar_chart_fig, use_container_width=True)
+    st.plotly_chart(bar_chart_fig, width='stretch')
 
     st.divider()
 
     # --- Data Table ---
     st.markdown("### Foreclosure Details")
     display_df = helper.format_data_for_display(filtered_data)
-    st.dataframe(display_df, use_container_width=True)
+    st.dataframe(display_df, width='stretch')
 
 else:
     st.warning(
